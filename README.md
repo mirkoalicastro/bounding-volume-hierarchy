@@ -1,2 +1,2 @@
-# bounding-volume-hierarchy
-A bounding volume hiearchy tree for collision detection and ray-casting matters
+# Bounding Volume Hierarchy Tree
+![alt text](https://raw.githubusercontent.com/mirkoalicastro/bounding-volume-hierarchy/master/demo/screen.png)
