@@ -83,7 +83,6 @@ namespace bvh {
                 r_ = c->r_;
             }
             bool overlap(Ray* other) {
-                float useless = 0;
                 return other->overlapSphere(x_, y_, z_, r_);
             }
             bool overlap(Node* other) {

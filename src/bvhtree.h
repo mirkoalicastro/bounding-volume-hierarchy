@@ -53,14 +53,14 @@ namespace bvh {
             }*/
             int BVHCollision(std::vector<int> *collisionResult, Node* a, Node* b) {
                 if (!(a->box_->overlap(*b->box_)))
-                    return 0;
+                    return 1;
                 if (a->type_ == b->type_ && a->type_ == Node::Type::LEAF) {
                     if(a->overlap(b)) {
                         (*collisionResult).push_back(a->id_);
                         (*collisionResult).push_back(b->id_);
                         return 1;
                     }
-                    return 0;
+                    return 1;
                 } else {
                     if (DescendA(a, b))
                         return BVHCollision(collisionResult, a->left_, b) + BVHCollision(collisionResult, a->right_, b);
